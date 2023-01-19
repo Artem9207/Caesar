@@ -19,11 +19,10 @@ class caesarCypher {
         Path originalText = Path.of("Text.txt");
         Path encryptText = Path.of("TextEncrypt.txt");
 
-
         List<String> list = Files.readAllLines(originalText);
         for (String str1 : list) {
             Files.writeString(encryptText, encryption(str1));
-            System.out.println("Original text is encrypted.\nText: " + str1);
+            System.out.println("Text: " + str1);
             System.out.println("Encrypt text: " + encryption(str1));
         }
 
@@ -39,11 +38,11 @@ class caesarCypher {
         } else if (choice == 2) {
             for (String str2 : list1) {
                 brutForce brutForce = new brutForce();
-                for(String encryptText1 : brutForce.plainTextmaker(str2)) {
+                for(String encryptText1 : brutForce.plainTextMaker(str2)) {
                     System.out.println(encryptText1);
                 }
             }
-            System.out.println("Something of that may be a look like a deciphered text");
+            System.out.println("\nSomething of that may be a look like a deciphered text");
         }
     }
 
@@ -136,7 +135,6 @@ class caesarCypher {
                 'ь', 'э', 'ю', 'я', 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й',
                 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Э', 'Ю', 'Я', '.', ',', ':', '-', '!', '?', '"', '"', '/', '@', '#', '$', '%',
                 '^', '%', '&', '*', '(', ')', '[', ']', '{', '}', '|', '<', '>', ';', '`', '~', '_', '=', '+'};
-        private char[] decodedText;
         private final String[] plainText;
         private final java.util.List<Character> alphabetList;
 
@@ -145,11 +143,11 @@ class caesarCypher {
             plainText = new String[alphabet.length];
         }
 
-        public String[] plainTextmaker(String cipherText) {
+        public String[] plainTextMaker(String cipherText) {
             char[] message = cipherText.toCharArray();
 
             for (int key = 0; key < alphabet.length; key++) {
-                decodedText = new char[message.length];
+                char[] decodedText = new char[message.length];
                 for (int i = 0; i < message.length; i++) {
                     if (message[i] != ' ') {
                         decodedText[i] = alphabet[(alphabetList.indexOf(message[i])+key) % alphabet.length];
