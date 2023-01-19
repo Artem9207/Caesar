@@ -59,21 +59,21 @@ class caesarCypher {
                 if (Character.isLowerCase(textChar[i])) {
                     while (textChar[i] != alphabet[index]) index++;
                     index += key;
-                    if (index > 32) {
+                    if (index > alphabet.length) {
                         index -= 33;
                     }
                     textChar[i] = alphabet[index];
                 } else if (Character.isUpperCase(textChar[i])) {
                     while (textChar[i] != alphabetUP[index]) index++;
                     index += key;
-                    if (index > 32) {
+                    if (index > alphabetUP.length) {
                         index -= 33;
                     }
                     textChar[i] = alphabetUP[index];
                 } else if (!Character.isAlphabetic(textChar[i])) {
                     while (textChar[i] != punctuationMarks[index]) index++;
                     index += key;
-                    if (index > 32) {
+                    if (index > punctuationMarks.length) {
                         index -= 31;
                     }
                     textChar[i] = punctuationMarks[index];
@@ -149,7 +149,8 @@ class caesarCypher {
             for (int key = 0; key < alphabet.length; key++) {
                 char[] decodedText = new char[message.length];
                 for (int i = 0; i < message.length; i++) {
-                    if (message[i] != ' ') {
+                    boolean Space = Character.isWhitespace(message[i]);
+                    if (!Space) {
                         decodedText[i] = alphabet[(alphabetList.indexOf(message[i])+key) % alphabet.length];
                     } else {
                         decodedText[i] = ' ';
