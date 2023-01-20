@@ -4,6 +4,8 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Scanner;
 
+// Artem Tarasyuk ROMEO
+
 class caesarCypher {
 
     public static final Character[] alphabet = {'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й',
@@ -22,34 +24,32 @@ class caesarCypher {
         List<String> list = Files.readAllLines(originalText);
         for (String str1 : list) {
             Files.writeString(encryptText, encryption(str1));
-            System.out.println("Text: " + str1);
+            System.out.println("Text.txt is already encrypted \nOriginal text: " + str1);
             System.out.println("Encrypt text: " + encryption(str1));
         }
 
-        String start = "\nChoose mode:\n 1) Decrypt with key\n 2) Brute force \n press 1 or 2";
-        System.out.println(start);
+        System.out.println("\nChoose decrypt mode:\n 1) Decrypt with symmetric key\n 2) Brute force \n press 1 or 2");
         int choice = console.nextInt();
 
         List<String> list1 = Files.readAllLines(encryptText);
         if (choice == 1) {
             for (String str2 : list1) {
-                System.out.println("Deciphered text is: " + decryption(str2));
+                System.out.println("Deciphered text is: " + decryption(str2) + "\nKey is 3");
             }
         } else if (choice == 2) {
             for (String str2 : list1) {
                 brutForce brutForce = new brutForce();
-                for(String encryptText1 : brutForce.plainTextMaker(str2)) {
+                for (String encryptText1 : brutForce.plainTextMaker(str2)) {
                     System.out.println(encryptText1);
                 }
             }
-            System.out.println("\nSomething of that may be a look like a deciphered text");
+            System.out.println("\nSomething of this may be a look like a deciphered text");
         }
     }
 
     public static String encryption(String text) {
         String result = "";
         int key = 3;
-
         char[] textChar = text.toCharArray();
 
         for (int i = 0; i < textChar.length; i++) {
@@ -60,21 +60,21 @@ class caesarCypher {
                     while (textChar[i] != alphabet[index]) index++;
                     index += key;
                     if (index > alphabet.length) {
-                        index -= 33;
+                        index -= alphabet.length;
                     }
                     textChar[i] = alphabet[index];
                 } else if (Character.isUpperCase(textChar[i])) {
                     while (textChar[i] != alphabetUP[index]) index++;
                     index += key;
                     if (index > alphabetUP.length) {
-                        index -= 33;
+                        index -= alphabetUP.length;
                     }
                     textChar[i] = alphabetUP[index];
                 } else if (!Character.isAlphabetic(textChar[i])) {
                     while (textChar[i] != punctuationMarks[index]) index++;
                     index += key;
                     if (index > punctuationMarks.length) {
-                        index -= 31;
+                        index -= punctuationMarks.length;
                     }
                     textChar[i] = punctuationMarks[index];
                 }
@@ -91,7 +91,6 @@ class caesarCypher {
     public static String decryption(String text) {
         String result = "";
         int key = 3;
-
         char[] textChar = text.toCharArray();
 
         for (int i = 0; i < textChar.length; i++) {
@@ -136,7 +135,7 @@ class caesarCypher {
                 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Э', 'Ю', 'Я', '.', ',', ':', '-', '!', '?', '"', '"', '/', '@', '#', '$', '%',
                 '^', '%', '&', '*', '(', ')', '[', ']', '{', '}', '|', '<', '>', ';', '`', '~', '_', '=', '+'};
         private final String[] plainText;
-        private final java.util.List<Character> alphabetList;
+        private final java.util.List <Character> alphabetList;
 
         public brutForce(){
             alphabetList = java.util.Arrays.asList(alphabet);
