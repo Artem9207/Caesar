@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1428e1f8-b0be-4c62-93fc-f3136c2642ae" name="Changes" comment="Add something">
+    <list default="true" id="1428e1f8-b0be-4c62-93fc-f3136c2642ae" name="Changes" comment="/">
+      <change afterPath="$PROJECT_DIR$/src/CaesarCypher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Files/Texts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Files/decryptedText.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Files/textEncrypt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Decryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/Encryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/FileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/FileWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Symbols/Symbols.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caesarCypher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/caesarCypher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decryptedText.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/caesarCypher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Files/text.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -35,24 +47,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "two.files.diff.last.used.file": "/Users/artemrezanov/Documents/Caesar/src/caesarCypher.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/Users/artemrezanov/Documents/Caesar/src/caesarCypher.java&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Application.caesarCypher">
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Files" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CaesarCypher">
+    <configuration name="CaesarCypher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CaesarCypher" />
+      <module name="Caesar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="caesarCypher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="caesarCypher" />
       <module name="Caesar" />
@@ -98,6 +122,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.CaesarCypher" />
       <item itemvalue="Application.caesarCypher" />
       <item itemvalue="Java Scratch.Main" />
       <item itemvalue="Java Scratch.Solution" />
@@ -106,6 +131,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CaesarCypher" />
         <item itemvalue="Application.caesarCypher" />
         <item itemvalue="Java Scratch.Caesar" />
         <item itemvalue="Java Scratch.Solution" />
@@ -157,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674191101948</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add a lot of">
+      <created>1674989023198</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674989023198</updated>
+    </task>
+    <task id="LOCAL-00007" summary="/">
+      <created>1674989427149</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674989427149</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +216,8 @@
     <MESSAGE value="Converted to a local variable (139)" />
     <MESSAGE value="Add '/n' (45)" />
     <MESSAGE value="Add something" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add something" />
+    <MESSAGE value="Add a lot of" />
+    <MESSAGE value="/" />
+    <option name="LAST_COMMIT_MESSAGE" value="/" />
   </component>
 </project>

@@ -27,4 +27,4 @@ bin/
 
 ### Mac OS ###
 .DS_Store
-TextEncrypt.txt
+src/Files/textEncrypt.txt
