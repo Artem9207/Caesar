@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1428e1f8-b0be-4c62-93fc-f3136c2642ae" name="Changes" comment="/">
-      <change afterPath="$PROJECT_DIR$/src/CaesarCypher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Files/Texts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Files/decryptedText.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Files/textEncrypt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Decryption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/Encryption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/FileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/FileWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Symbols/Symbols.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1428e1f8-b0be-4c62-93fc-f3136c2642ae" name="Changes" comment="A lot of">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decryptedText.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/caesarCypher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Files/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CaesarCypher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CaesarCypher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Files/decryptedText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Files/decryptedText.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674989427149</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="A lot of">
+      <created>1676442570649</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676442570649</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +214,7 @@
     <MESSAGE value="Add something" />
     <MESSAGE value="Add a lot of" />
     <MESSAGE value="/" />
-    <option name="LAST_COMMIT_MESSAGE" value="/" />
+    <MESSAGE value="A lot of" />
+    <option name="LAST_COMMIT_MESSAGE" value="A lot of" />
   </component>
 </project>

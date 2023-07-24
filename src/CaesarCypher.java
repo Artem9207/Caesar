@@ -1,4 +1,5 @@
 import Services.Decryption;
+import Services.Encryption;
 import Services.FileReader;
 import Services.FileWriter;
 
@@ -6,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import static Files.Texts.*;
 import static Services.Encryption.encryption;
@@ -40,10 +42,8 @@ class CaesarCypher {
 
         if (choice == 1) {
             System.out.println("Deciphered text is: ");
-            for (int i = 0; i < originalList.size(); i++) {
-                String str = originalList.get(i);
-                originalList.set(i, Decryption.decryptionKey(str));
-            }
+            originalList.replaceAll(Decryption::decryptionKey);
+
             FileWriter.fileWriter(decryptedText, originalList);
 
             FileReader.fileReader(decryptedText);
@@ -51,21 +51,19 @@ class CaesarCypher {
             System.out.println("Decrypted text now in 'decryptedText.txt'");
 
         } else if (choice == 2) {
-            for (int i = 0; i < originalList.size(); i++) {
-                String str = originalList.get(i);
-                originalList.set(i, Decryption.bruitForce(str, 1));
-                System.out.println(Decryption.bruitForce(str, 1));
-            }
+            originalList = originalList.stream()
+                    .map(str -> Decryption.bruitForce(str, 1))
+                    .peek(System.out::println)
+                    .collect(Collectors.toList());
+
             System.out.println("\nThis text is readable?\nYes - 1/No - 2\npress 1 or 2\n");
             int choose = console.nextInt();
 
             if (choose == 2) {
                 do {
-                    for (int i = 0; i < originalList.size(); i++) {
-                        String str = originalList.get(i);
-                        originalList.set(i, Decryption.bruitForce(str, 1));
-                        System.out.println(Decryption.bruitForce(str, 1));
-                    }
+                    originalList.replaceAll(str -> Decryption.bruitForce(str, 1));
+                    originalList.forEach(System.out::println);
+
                     System.out.println("\nThis text is readable?\nYes - 1/No - 2\npress 1 or 2\n");
                 } while (console.nextInt() == 2);
 
